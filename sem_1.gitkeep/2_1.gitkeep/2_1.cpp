@@ -1,0 +1,17 @@
+﻿#include <iostream>  
+using namespace std;
+int main() {
+	int n;
+	int sum = 0;
+	if (n <= 0) {
+		cout << "error" << endl;
+	}
+	else {
+		for (int i = 1; i <= n; i++);
+		{
+			sum += 1;
+		}
+	}
+	cout << sum << endl;
+	return 0;
+}
