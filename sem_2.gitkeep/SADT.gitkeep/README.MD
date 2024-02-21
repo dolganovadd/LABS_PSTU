@@ -2,4 +2,4 @@
 
 Модель SADT на тему "Автоматизация кормушки для животных"
 
-Ссылка на YouTube:
+Ссылка на YouTube: <https://youtu.be/iaFBnNARtf0?si=xOs4Ur9id7AW6xnK>
