@@ -58,4 +58,6 @@ int main() {
 
 }
 ```
+# Пример работы программы
+![](https://sun9-41.userapi.com/impg/dmZ6lXlfCVMZ_a36MIakxI0TGf8hnOFeqgaPgQ/VkH91NcTcGY.jpg?size=397x102&quality=96&sign=818808baed73c8c6f800c86a7a3d71d8&type=album)
 
