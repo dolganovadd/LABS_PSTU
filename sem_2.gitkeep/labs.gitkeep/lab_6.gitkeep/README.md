@@ -15,6 +15,7 @@
 которые содержат и буквы и цифры.
 
 # Блок - схема
+![](https://psv4.userapi.com/c909618/u272768864/docs/d36/20009074d72d/lab_6.png?extra=a1ML7YdcJhJ9U4PbiKFOWdPWpkrKI5HTmYaP-70SixrVpBSp-RH-iO6FrYYE4VKUtidGu8maUHo4kZMENPzV1o1UBlhA9oNxkSB7mmqneyM_pzPU6FpPkW-zeCdYxZkyTTeShcj-zqIED8vzQksAQQX8zQ)
 ![](https://sun9-18.userapi.com/impg/2t1KgPzEYMGgRMaCu3s-FeGUaGv0YaNJCEzy2A/cqGwYe_fBc0.jpg?size=736x626&quality=95&sign=34ab1183eac340ba23e46f9d51bca34f&type=album)
 
 # Код программы 
