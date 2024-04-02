@@ -3,7 +3,7 @@
 ![](https://sun9-38.userapi.com/impg/Z-f0IFQuxnvAStqz31yfYxnfWHbzmmgjhtaz3w/q7kKCcN_3zQ.jpg?size=1186x118&quality=96&sign=fe111cb1c4dbce000d66153caf441869&type=album)
 
 # **Блок-схема**
-будет
+будет, обещаю.
 
 # **Код программы**
 
