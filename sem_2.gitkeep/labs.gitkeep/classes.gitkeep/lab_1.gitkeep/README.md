@@ -1,9 +1,78 @@
-**Лабораторная работа №1 - Классы и объекты. Инкапсуляция.**
+# **Лабораторная работа №1 - Классы и объекты. Инкапсуляция.**
 >Вариант 11
 
 Поле first – дробное положительное число, оклад, поле second – целое положительное число, количество отработанных дней. Реализовать метод summa() –вычисление начисленной суммы за данное количество дней по формуле: оклад/количество_дней_месяца*количество_отработанных _дней
 
-**Контрольные вопросы**
+# **Код программы**
+>main
+```cpp
+#include <iostream>
+#include "fraction.h"
+using namespace std;
+
+fraction make_fraction(double F, int S)
+{
+	fraction t;//создали временную переменную
+	t.Init(F, S);//инициализировали поля переменной t с помощью параметров функции 
+	return t;//вернули значение переменной t
+}
+
+int main() {
+    fraction A;
+    A.Init(1, 1);
+    A.Read();
+    A.Show();
+    cout << A.Summa();
+
+    return 0;
+}
+```
+
+>fraction.cpp
+```cpp
+#include <iostream>
+#include "fraction.h"
+using namespace std;
+
+void fraction::Init(double F, int S)
+{
+	first = F; second = S;
+}
+
+void fraction::Read()
+{
+	cout << "Salary: "; cin >> first;
+	cout << "Days worked: "; cin >> second;
+}
+
+void fraction::Show()
+{	
+	cout << "Salary: " << first;
+	cout << "Days worked: " << second;
+	cout << "\n";
+}
+
+double fraction::Summa()
+{	
+	return (first * second) / 30;
+}
+```
+
+>fraction.h
+```cpp
+#pragma once
+struct fraction
+{
+	double first;
+	int second;
+	void Init(double, int);//метод для инициализации полей 
+	void Read();//метод для чтения значений полей
+	void Show();//метод для вывода значений полей 
+	double Summa();
+};
+```
+
+# **Контрольные вопросы**
 >Что такое класс?
 
 Классы в С++ — это абстракция описывающая методы, свойства ещё не существующих объектов.
