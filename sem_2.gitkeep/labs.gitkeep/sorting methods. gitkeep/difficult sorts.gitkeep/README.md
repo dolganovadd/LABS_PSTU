@@ -5,138 +5,194 @@
 
 # Код программы
 ```cpp
-﻿// естественное слияние и многофазная сортировка
+//естественное слияние
+#include <iostream> 
+using namespace std; 
+ 
+void merge(int* v, int r, int t) { 
+    int p = 1; //количество элементов в первой серии 
+    int k = 1; //количество элементов во второй серии 
+    int i = 0; 
+    bool flag = false; //флажок для определения надобности второй серии  
+ 
+    while (v[i] <= v[i + 1] && i < r - 1) { //счетчик количества элементов 1 серии 
+        p++; 
+        i++; 
+    } 
+    if (v[i] > v[i + 1] && i < r - 1) { 
+        i++; 
+        flag = true; 
+        while (v[i] <= v[i + 1] && i < r - 1) { 
+            k++; 
+            i++; 
+        } 
+    } 
+    int num = i + 1;  
+    int* a = new int[p]; //1 серия 
+    int* b = new int[k]; //2 серия 
+ 
+    for (int i = 0; i < p; i++) { 
+        a[i] = v[i]; 
+    } 
+ 
+    int g = 0; 
+    if (flag == true) { 
+        for (int i = p; i < p + k; i++) { //заполнение 2 серии 
+            b[g] = v[i]; 
+            g++; 
+        } 
+    } 
+    int j = 0; 
+    int l = 0; 
+    if (flag == true) { //проверка на наличие второй надобности слияния 
+        for (int i = 0; i < num; i++) { 
+            if ((a[l] < b[j] || j >= k) && l < p) { 
+                v[i] = a[l]; 
+                l++; 
+            } 
+            else  
+            if ((a[l] > b[j] || l >= p) && j < k) { 
+                v[i] = b[j]; 
+                j++; 
+            } 
+            else 
+            if (a[l] == b[j] && j < k && l < p) { 
+                v[i] = a[l]; 
+                v[i + 1] = b[j]; 
+                l++; 
+                j++; 
+                i++; 
+            } 
+        } 
+    } 
+    delete[] a; 
+    delete[] b; 
+ 
+} 
+void mergeSort(int* v, int r, int i) { 
+    if (i < r) { 
+        merge(v, r, i); //функция сортировки 
+        mergeSort(v, r, i + 1); //рекурсия 
+    } 
+} 
+ 
+ 
+int main() 
+{ 
+    system("chcp 1251"); 
+    int array[25] = {1,2,3,4,5,5,5,5,5,5,0,0,0,0,0,3,3,3,3,4,5,3,1,1,1}; 
+ 
+    cout << "Исходный массив: " << endl; 
+    for (int i = 0; i < 25; i++) { 
+        cout << array[i]; 
+    } 
+    cout << endl; 
+    mergeSort(array, 25, 0); 
+    cout << "Отсортированный массив: " << endl; 
+    for (int i = 0; i < 25; i++) { 
+        cout << array[i]; 
+    } 
+}
+```
 
-#include <iostream>
-using namespace std;
-const int Size = 25;
-int t[26];
-int ta;
-void Merge(int c[], int d[], int l, int m, int r);
-void PhaseSort(int arr[])
-{
-    bool flag = true;
-    int gap = Size;
-    while (gap > 1 || flag)
-    {
-        gap = (gap * 10) / 13;
-        if (gap < 1)
-            gap = 1;
-
-        flag = false;
-        for (int i = 0; i < Size - gap; i++)
-        {
-            if (arr[i] > arr[i + gap])
-            {
-                swap(arr[i], arr[i + gap]);
-                flag = true;
-            }
-        }
-    }
-}
-void MergePass(int x[], int y[], int s, int n)
-{
-    int i = 0;
-    while (i <= ta - 2 * s)
-    {
-        int r = ((i + 2 * s) < ta) ? t[i + 2 * s] : n;
-
-        Merge(x, y, t[i], t[i + s] - 1, r - 1);
-        i = i + 2 * s;
-    }
-    if (i + s < ta)
-        Merge(x, y, t[i], t[i + s] - 1, n - 1);
-    else  if (i < ta)
-    {
-        for (int j = t[i]; j <= n - 1; j++)
-            y[j] = x[j];
-    }
-}
-void MergeSort(int a[], int n)
-{
-    int* b = new int[n];
-    int s = 1;
-    while (s < ta)
-    {
-        MergePass(a, b, s, n);
-        s += s;
-        MergePass(b, a, s, n);
-        s += s;
-    }
-}
-void Merge(int c[], int d[], int l, int m, int r)
-{
-    int i = l, j = m + 1, k = r;
-
-    while ((i <= m) && (j <= r))
-    {
-        if (c[i] <= c[j])
-            d[l++] = c[i++];
-        else
-            d[l++] = c[j++];
-    }
-    if (i > m)
-        for (int q = j; q <= r; q++)
-            d[l++] = c[q];
-    else
-        for (int p = i; p <= m; p++)
-            d[l++] = c[p];
-}
-void GetBPoint(int a[], int b[], int n, int& m)
-{
-    int j = 0;
-    b[j++] = 0;
-    for (int i = 0; i < n - 1; i++)
-    {
-        if (a[i + 1] < a[i])
-            b[j++] = i + 1;
-    }
-    m = j;
-}
-int menu()
-{
-    cout << "1 - многофазная сортировка\n2 - естественная сортировка\nВведите цифру соответствующую тому какой метод сортировки применить: ";
-    int n;
-    cin >> n;
-    return n;
-}
-void CoutArray(int arr[])
-{
-    for (int i = 0; i < Size; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
-int main()
-{
-    setlocale(LC_ALL, "ru_RU");
-    int array[Size];
-    for (int i = 0; i < Size; i++) { array[i] = rand() % 10; }
-    cout << "Исходный массив: ";
-    CoutArray(array);
-    switch (menu())
-    {
-    case 1:
-        PhaseSort(array);
-        cout << "Отсортированный массив: ";
-        CoutArray(array);
-        break;
-    case 2:
-        GetBPoint(array, t, Size, ta);
-        MergeSort(array, Size);
-        cout << "Отсортированный массив: ";
-        CoutArray(array);
-        break;
-    default:
-        cout << "Неправильный выбор " << endl;
-        break;
-    }
-    return 0;
+```cpp
+//многофазная сортировка
+#include <iostream> 
+using namespace std; 
+ 
+void merge(int arr[], int left, int mid, int right) { 
+    int i = left; 
+    int j = mid + 1; 
+    int k = 0; 
+    int* temp = new int[right - left + 1]; 
+ 
+    while (i <= mid && j <= right) { 
+        if (arr[i] <= arr[j]) { 
+            temp[k++] = arr[i++]; 
+        } 
+        else { 
+            temp[k++] = arr[j++]; 
+        } 
+    } 
+ 
+    while (i <= mid) { 
+        temp[k++] = arr[i++]; 
+    } 
+ 
+    while (j <= right) { 
+        temp[k++] = arr[j++]; 
+    } 
+ 
+    for (int p = 0; p < k; p++) { 
+        arr[left + p] = temp[p]; 
+    } 
+ 
+    delete[] temp; // освобождение памяти 
+} 
+ 
+void mergeSort(int arr[], int left, int right) { 
+    if (left < right) { 
+        int mid = left + (right - left) / 2; 
+ 
+        mergeSort(arr, left, mid); 
+        mergeSort(arr, mid + 1, right); 
+ 
+        merge(arr, left, mid, right); 
+    } 
+} 
+ 
+void multiPhaseSort(int arr[], int size) { 
+    int phaseSize = 1; 
+ 
+    while (phaseSize < size) { 
+        int left = 0; 
+ 
+        while (left < size - 1) { 
+            int mid = std::min(left + phaseSize - 1, size - 1); 
+            int right = std::min(left + 2 * phaseSize - 1, size - 1); 
+ 
+            merge(arr, left, mid, right); 
+ 
+            left += 2 * phaseSize; 
+        } 
+ 
+        phaseSize *= 2; 
+    } 
+} 
+ 
+int main() { 
+    system("chcp 1251"); 
+    int size; 
+ 
+    cout << "Введите размер массива: "; 
+    cin >> size; 
+ 
+    int* arr = new int[size]; 
+ 
+    cout << "Введите элементы массива: "; 
+    for (int i = 0; i < size; i++) { 
+        cin >> arr[i]; 
+    } 
+ 
+    multiPhaseSort(arr, size); 
+ 
+    cout << "Отсортированный массив: "; 
+    for (int i = 0; i < size; i++) { 
+        cout << arr[i] << " "; 
+    } 
+    cout << endl; 
+ 
+    delete[] arr; // освобождение памяти 
+ 
+    return 0; 
 }
 ```
 # Результаты работы 
 
-![Многофазная сортировка](https://sun9-53.userapi.com/impg/t9R4waGAfi4gOOBijmP86qNefwMyVxAEX9N8SA/XJkf_9MoXBE.jpg?size=625x102&quality=96&sign=c7145c2999888ebeccb35af53890ce9d&type=album)
+Естественная сортировка
 
-![Естественная сортировка](https://sun9-22.userapi.com/impg/xGVstlHqrOIvLATPoK4NYrMPmNBObjVkcZE5sA/h7nqzsRfeSY.jpg?size=618x97&quality=96&sign=35149b6596a281b96e38f0d13c78d7b2&type=album)
+![](https://sun9-45.userapi.com/impg/mqGs0HYHuEO6c0cwe6OA3RZOHHh0M9fDmSkroA/x97XWenC9DU.jpg?size=316x114&quality=96&sign=37592962d8b05736c5820942b6740f59&type=album)
+
+Многофазная сортировка
+
+![](https://sun9-22.userapi.com/impg/yEQ2ry438TzOjl3U3rWOXiDx4PrzU8g_hjSIeA/lxsTeS7yxAE.jpg?size=385x108&quality=96&sign=ed54458fc33f714b5fe3b44d1701aaae&type=album)
