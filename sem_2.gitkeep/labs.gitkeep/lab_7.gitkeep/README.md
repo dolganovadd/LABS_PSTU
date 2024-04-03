@@ -6,6 +6,10 @@
 а) для вычитания десятичных дробей;
 б) для вычитания обыкновенных дробей.
 
+**Блок-схема**
+
+![](https://psv4.userapi.com/c237231/u272768864/docs/d41/49226645b51d/7_1.png?extra=6m7UZCRrbi_EBJHdLfzs3Dw6SKiGPFvnJmS-_FBMvWGGk7FqpJ1crV13HuvyqRTQzhdFaLBDS87dAiZHI6p8t0vhmnLs4t9zm6uHExzaf_rZHMnrORuJkMI6ChIdLAtymXtTycEQKfZ4JvohE_l8KRrVo5M)
+
 **Код программы:**
 ```cpp
 #include <iostream>
@@ -52,6 +56,10 @@ int main() {
 являющихся точными квадратами (2, 4, 9, 16,. . . ) типа int. Написать вызывающую функцию main, которая
 обращается к функции kvadr не менее трех раз с
 количеством параметров 3, 7, 11.
+
+**Блок-схема**
+
+![](https://psv4.userapi.com/c237031/u272768864/docs/d27/9bdc9035a9d6/7_2.png?extra=nMO3jWCzlPtmaFRfRhIsF4ftACbou0AvttsLdv6rhhzG2RAbdv3P8zwxENW_MLnCvzw84fegMb9woLq7P0q514jVlpOX84ZrQ97nRcE0sZ2K_oEZBbMFDDWvtvVyTlCgUp4cW3iAejx8a5h5SUNAwpx7K4E)
 
 **Код программы:**
 ```cpp
