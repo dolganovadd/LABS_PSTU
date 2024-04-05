@@ -1,12 +1,12 @@
 # Быстрая сортировка по Хоару
 
 # Блок-схема
-...
+![](https://psv4.userapi.com/c237031/u272768864/docs/d2/30f753dc2561/hoara_sort_png.png?extra=7REbcg0yVgj2VoLsZx12a4jepwN7CW-4MHpci-Ey-dLeESAmMDL7zpDlMX3TWCjbWzTCRGKhS8BhqQLZO3UyGwVYoI1xLSUZIFVphtq2jGrhrkIlk7sQ3mLtRkbIJu4VTIvnI94vlVoFM0JHiRy6h5Dg3y4)
 
 # Код программы
 ```cpp
 #include <iostream>
-
+using namespace std;
 void swap(int& a, int& b) {
     int temp = a;
     a = b;
@@ -42,19 +42,19 @@ int main()
     int size = 25;
     int arr[] = { 1, 0, 2, 0, 3, 0, 0, 0, 1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 3, 4, 2, 0, 2, 3, 4 };
 
-    std::cout << "Исходный массив: ";
+   cout << "Исходный массив: ";
     for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     quickSort(arr, 0, size - 1);
 
-    std::cout << "Отсортированный массив: ";
+    cout << "Отсортированный массив: ";
     for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
