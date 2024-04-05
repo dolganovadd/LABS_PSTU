@@ -1,5 +1,5 @@
-﻿#include <iostream>
-
+#include <iostream>
+using namespace std;
 void swap(int& a, int& b) {
     int temp = a;
     a = b;
@@ -35,19 +35,19 @@ int main()
     int size = 25;
     int arr[] = { 1, 0, 2, 0, 3, 0, 0, 0, 1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 3, 4, 2, 0, 2, 3, 4 };
 
-    std::cout << "Исходный массив: ";
+   cout << "Исходный массив: ";
     for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     quickSort(arr, 0, size - 1);
 
-    std::cout << "Отсортированный массив: ";
+    cout << "Отсортированный массив: ";
     for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
