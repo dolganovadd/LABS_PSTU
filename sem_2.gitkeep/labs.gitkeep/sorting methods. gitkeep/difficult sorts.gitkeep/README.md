@@ -1,7 +1,13 @@
 # Естественная и многофазная сортировки
 # Блок - схема
 
-будет позже
+>Естественное слияние
+
+![](https://psv4.userapi.com/c235031/u272768864/docs/d42/7fe9cc9ced98/merge.png?extra=e31j4Ru_Ut9UCBH477Ub0y4q66-YK8aCqzlr66HvipH26dQSVUIeyMbmVVd7PiKjXUNPFLXEQHo8G29-grrb3zQRE8MPdLX-lIUL7DeGa0uSDstYyOLAi2zSOlheA_QyPFWFBAzO1xh4LOqEdz-E-vU9Spg)
+
+>Многофазная сортировка
+
+![](https://psv4.userapi.com/c236331/u272768864/docs/d40/d1618dc73e22/phase.png?extra=Xz5V2xE__zfjOeioT08POtTX0ciT7iWvhY53E_tA6NbxC5AxjlOQiYeAMDhI9WdbWsYUIHUv_UfvTFB5_8HeAPDI0pQepwB54iYjr-VYzwOyG-Dz0d_XVG82oDdRf0RtH6dfI-g5moJyoe4V-PhPDTmXYGo)
 
 # Код программы
 ```cpp
