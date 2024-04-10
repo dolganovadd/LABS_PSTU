@@ -3,6 +3,9 @@
 
 Поле first – дробное положительное число, оклад, поле second – целое положительное число, количество отработанных дней. Реализовать метод summa() –вычисление начисленной суммы за данное количество дней по формуле: оклад/количество_дней_месяца*количество_отработанных _дней
 
+# UML - диаграмма
+![](https://psv4.userapi.com/c909228/u272768864/docs/d2/67b4c0938290/lab_1.png?extra=y4-zvFM12450q3lNFGgq0fL6xvYcCUaUYLXQSntVJhogm61mXcZVR2_wgJFyfRv1qZtQRaDyC02vFks9H51cNSgaswWQAG8BnKdyQhzpWJlNfkwJjrmt4rZ3cG-XWVaqEwi623gd02_kei3WLm6a3TxteA)
+
 # **Код программы**
 >main
 ```cpp
