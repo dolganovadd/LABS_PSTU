@@ -8,6 +8,11 @@
 Модель – string
 
 Стоимость– int
+
+# UML - диаграмма
+
+![](https://psv4.userapi.com/c909328/u272768864/docs/d19/21686901a6f9/lab_2.png?extra=3hRFLJ3Hxve-9ubHBee0k9IpeGGDx78y2_oHGWD6f4OeE9mg7qxkn0ouCxAZnDDLNDlvSvgRwRiNz9yR4CCORt3UFlMEXYa50QwG3LNA10KZpr0MDJvOGSsPBjCKT8sLzzESrBwYJGTkElebVyu6j2_BaQ)
+
 # **Код программы**
 >main
 ```cpp
