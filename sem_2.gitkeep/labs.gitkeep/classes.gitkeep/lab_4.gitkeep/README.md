@@ -256,8 +256,8 @@ ostream& operator <<(ostream& out, const Time& time) {
 }
 
 ```
-#Результаты работы 
+# Результаты работы 
 
 ![](https://sun9-80.userapi.com/impg/77CXbffKk3h1b3viRFKB6Qjw9gbmKPcvMoGI0g/_Mof59x0Au8.jpg?size=167x583&quality=96&sign=a48e5969c0407a8b99fad8b08a45ebed&type=album)
 
-#Контрольные вопросы
+# Контрольные вопросы
