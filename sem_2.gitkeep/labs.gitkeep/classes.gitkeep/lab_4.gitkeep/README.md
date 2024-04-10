@@ -13,6 +13,10 @@
 Создать произвольный класс TIME с полями часы, минуты, секунды.
 Переопределить методы увеличения полей на 1 и определить метод увеличения даты на n секунд и минут.
 
+# UML - диаграмма
+
+![](https://psv4.userapi.com/c909218/u272768864/docs/d42/5b96c152aa1e/lab_4.png?extra=FNN6GPsSV4etaKl1Lly4ax41K0DUOZZxLeApeak_WjV_V7Z_G4UxlM9xze1k8rWGlRxFZvBQ6qeRTCeiH7MDKgX_oTYGXKX93tj5mI6r503DDylt1xC3qGWeav5J0Y-01a94XJe7W6N1-5uA4hbApiLnEw)
+
 # Код программы 
 > Triad.h
 
