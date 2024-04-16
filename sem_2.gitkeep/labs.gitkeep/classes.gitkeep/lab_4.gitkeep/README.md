@@ -265,3 +265,287 @@ ostream& operator <<(ostream& out, const Time& time) {
 ![](https://sun9-80.userapi.com/impg/77CXbffKk3h1b3viRFKB6Qjw9gbmKPcvMoGI0g/_Mof59x0Au8.jpg?size=167x583&quality=96&sign=a48e5969c0407a8b99fad8b08a45ebed&type=album)
 
 # Контрольные вопросы
+
+>Для чего используется механизм наследования?
+
+Наследование - это механизм создания нового класса на основе уже существующего. При этом к существующему классу могут быть добавлены новые элементы (данные и функции), либо существующие функции могут быть изменены. Наследование содействует повторному использованию атрибутов и методов класса, а значит, делает процесс разработки ПО более эффективным.
+
+>Каким образом наследуются компоненты класса, описанные со спецификатором public?
+
+Protected и public данные из базового класса остаются, соответственно protected и public в производном классе.
+
+>Каким образом наследуются компоненты класса, описанные со спецификатором private?
+
+Данные protected и public базового класса доступны из методов производного класса, но недоступны извне, то есть они становятся private.
+
+>Каким образом наследуются компоненты класса, описанные со спецификатором protected?
+
+Данные, которые были protected и public становятся protected.
+
+>Производный класс описывается с помощью механизма наследования.
+
+>Наследуются ли конструкторы?
+
+Нет.
+
+>Наследуются ли деструкторы?
+
+Нет.
+
+>В каком порядке конструируются объекты производных классов?
+
+Объекты класса конструируются снизу вверх: сначала базовый, потом компоненты-объекты (если они имеются), а потом сам производный класс. 
+
+>В каком порядке уничтожаются объекты производных классов?
+
+Уничтожаются объекты в обратном порядке: сначала производный, потом его компоненты-объекты, а потом базовый объект.
+
+>Что представляют собой виртуальные функции и механизм позднего связывания?
+
+Виртуальный метод — это метод, ссылка на который разрешается на этапе выполнения программы.
+
+Механизм позднего связывания в С++ реализуется с помощью виртуальных методов. Разрешение ссылок на функции происходит на этапе выполнения программы в зависимости от конкретного типа объекта, вызвавшего функцию.
+
+Для определения виртуального метода используется спецификатор virtual.
+
+>Могут ли быть виртуальными конструкторы? Деструкторы?
+
+Виртуальных конструкторов не бывает. Возможна имитация виртуального конструктора с помощью паттерна "Фабрики объектов". Виртуальный деструктор необходим, когда в классе есть хоть одна виртуальная функция или класс является базовым.
+
+>Наследуется ли спецификатор virtual?
+
+Нет.
+
+>Какое отношение устанавливает между классами открытое наследование?
+
+Открытое наследование устанавливает между классами отношение «является», или в английской нотации «is-а». 
+
+>Какое отношение устанавливает между классами закрытое наследование?
+
+"Содержит"
+
+>В чем заключается принцип подстановки?
+
+Этот принцип позволяет использовать полиморфизм, который является ключевым аспектом ООП. Полиморфизм позволяет объектам разных классов обрабатываться единообразно, что делает код более гибким и понятным.
+
+>Имеется иерархия классов: class Student
+>{
+public:
+}; 
+int age;
+string name;
+... 
+class Employee : public Student
+{
+protected:
+string post;
+...
+};
+class Teacher : public Employee
+{
+protected: int stage;
+...
+};
+Teacher x;
+Какие компонентные данные будет иметь объект х?
+
+Объект x, созданный как экземпляр класса Teacher, будет иметь следующие компонентные данные в соответствии с иерархией классов:
+
+1. Поля класса Student, так как Teacher является производным от Student:
+   - int age
+   - string name
+
+2. Поля класса Employee, так как Teacher является производным от Employee:
+   - string post
+
+3. Поля класса Teacher:
+   - int stage
+
+Таким образом, объект x будет иметь следующие компонентные данные:
+
+- age (типа int)
+- name (типа string)
+- post (типа string)
+- stage (типа int)
+
+>Для классов Student, Employee и Teacher написать конструкторы без параметров.
+
+```cpp
+class Student {
+public:
+    // Конструктор без параметров для класса Student
+    Student() {
+        // По умолчанию устанавливаем возраст и имя
+        age = 0;
+        name = "NoName";
+    }
+
+protected:
+    int age;
+    string name;
+};
+
+class Employee : public Student {
+public:
+    // Конструктор без параметров для класса Employee
+    Employee() {
+        // По умолчанию устанавливаем должность
+        post = "Unknown";
+    }
+
+protected:
+    string post;
+};
+
+class Teacher : public Employee {
+public:
+    // Конструктор без параметров для класса Teacher
+    Teacher() {
+        // По умолчанию устанавливаем стаж
+        stage = 0;
+    }
+
+protected:
+    int stage;
+};
+
+```
+>Для классов Student, Employee и Teacher написать конструкторы с параметрами.
+
+```cpp
+class Student {
+public:
+    // Конструктор с параметрами для класса Student
+    Student(int studentAge, const string& studentName) : age(studentAge), name(studentName) {}
+
+protected:
+    int age;
+    string name;
+};
+
+class Employee : public Student {
+public:
+    // Конструктор с параметрами для класса Employee
+    Employee(int employeeAge, const string& employeeName, const string& employeePost)
+        : Student(employeeAge, employeeName), post(employeePost) {}
+
+protected:
+    string post;
+};
+
+class Teacher : public Employee {
+public:
+    // Конструктор с параметрами для класса Teacher
+    Teacher(int teacherAge, const string& teacherName, const string& teacherPost, int teacherStage)
+        : Employee(teacherAge, teacherName, teacherPost), stage(teacherStage) {}
+
+protected:
+    int stage;
+};
+
+```
+>Для классов Student, Employee и Teacher написать конструкторы копирования.
+
+```cpp
+class Student {
+public:
+    // Конструктор копирования для класса Student
+    Student(const Student& other) : age(other.age), name(other.name) {}
+
+protected:
+    int age;
+    string name;
+};
+
+class Employee : public Student {
+public:
+    // Конструктор копирования для класса Employee
+    Employee(const Employee& other) : Student(other), post(other.post) {}
+
+protected:
+    string post;
+};
+
+class Teacher : public Employee {
+public:
+    // Конструктор копирования для класса Teacher
+    Teacher(const Teacher& other) : Employee(other), stage(other.stage) {}
+
+protected:
+    int stage;
+};
+```
+
+>Для классов Student, Employee и Teacher определить операцию присваивания.
+
+```cpp
+class Student {
+public:
+    // Конструктор с параметрами
+    Student(int studentAge, const string& studentName) : age(studentAge), name(studentName) {}
+
+    // Конструктор копирования
+    Student(const Student& other) : age(other.age), name(other.name) {}
+
+    // Оператор присваивания
+    Student& operator=(const Student& other) {
+        if (this != &other) {
+            age = other.age;
+            name = other.name;
+        }
+        return *this;
+    }
+
+protected:
+    int age;
+    string name;
+};
+
+class Employee : public Student {
+public:
+    // Конструктор с параметрами
+    Employee(int employeeAge, const string& employeeName, const string& employeePost)
+        : Student(employeeAge, employeeName), post(employeePost) {}
+
+    // Конструктор копирования
+    Employee(const Employee& other) : Student(other), post(other.post) {}
+
+    // Оператор присваивания
+    Employee& operator=(const Employee& other) {
+        if (this != &other) {
+            // Вызываем оператор присваивания базового класса
+            static_cast<Student&>(*this) = other;
+            post = other.post;
+        }
+        return *this;
+    }
+
+protected:
+    string post;
+};
+
+class Teacher : public Employee {
+public:
+    // Конструктор с параметрами
+    Teacher(int teacherAge, const string& teacherName, const string& teacherPost, int teacherStage)
+        : Employee(teacherAge, teacherName, teacherPost), stage(teacherStage) {}
+
+    // Конструктор копирования
+    Teacher(const Teacher& other) : Employee(other), stage(other.stage) {}
+
+    // Оператор присваивания
+    Teacher& operator=(const Teacher& other) {
+        if (this != &other) {
+            // Вызываем оператор присваивания базового класса
+            static_cast<Employee&>(*this) = other;
+            stage = other.stage;
+        }
+        return *this;
+    }
+
+protected:
+    int stage;
+};
+
+```
+
