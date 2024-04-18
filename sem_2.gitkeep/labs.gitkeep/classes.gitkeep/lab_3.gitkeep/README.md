@@ -8,7 +8,9 @@
 
 # UML - диаграмма
 
-![](https://psv4.userapi.com/c909218/u272768864/docs/d9/701e19c583b3/lab_3.png?extra=RWmDwrAiKFuSicfy0WStbDeQNQf3We0n7cFrYUZnVjG9GfgNFWLEufNqUqN8zETubbI-EBUmM2M02BP2gNTUywOCSMw4UUXv_J2RKhZcsQp8JbgLVYUOQT_-hVktnrCtNfmJvUYk16z7g06vgLUlQzeNvg)
+![](https://sun9-7.userapi.com/impg/TERxYyFP3z6yeVNVmqSREUgV7ZWVXMaa8dulSQ/s4ol3Nb3MKY.jpg?size=339x288&quality=96&sign=d4a1be73d62536dcfc85adcc369c56bc&type=album)
+
+
 
 # **Контрольные вопросы.**
 
