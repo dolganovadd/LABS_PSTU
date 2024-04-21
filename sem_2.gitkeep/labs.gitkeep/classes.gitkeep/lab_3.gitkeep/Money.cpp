@@ -1,59 +1,51 @@
-#include "Money.h" 
-#include <iostream> 
+#include <iostream>
+#include "Money.h"
+
 using namespace std;
 
-//перегрузка операции присваивания 
-Money& Money::operator=(const Money& t)
-{
-	//проверка на самоприсваивание 
-	if (&t == this) return *this;
-	roubles = t.roubles;
-	penny = t.penny;
+Money& Money::operator =(const Money& temp) {
+	if (&temp == this) {
+		return *this;
+	}
+	rub = temp.rub;
+	kop = temp.kop;
 	return *this;
 }
 
-//перегрузка префиксной операции инкремент 
-Money& Money::operator++()
-{
-	int temp = roubles * 100 + penny;
+Money& Money::operator ++() {
+	int temp = rub * 100 + kop;
 	temp++;
-	roubles = temp / 100;
-	penny = temp % 100;
+	kop = temp / 100;
+	kop = temp % 100;
 	return *this;
 }
 
-//перегрузка постфиксной операции инкремент 
-Money Money::operator ++(int)
-{
-	int temp = roubles * 100 + penny;
+Money Money::operator ++(int) {
+	int temp = rub * 100 + kop;
 	temp++;
-	Money t(roubles, penny);
-	roubles = temp / 100;
-	penny = temp % 100;
-	return t;
+	Money ex1(rub, kop);
+	kop = temp / 100;
+	kop = temp % 100;
+	return ex1;
 }
 
-//перегрузка бинарной операции сложения 
-Money Money::operator+(const Money& t)
-{
-	int temp1 = roubles * 100 + penny;
-	int temp2 = t.roubles * 100 + t.penny;
-	Money p;
-	p.roubles = (temp1 + temp2) / 100;
-	p.penny = (temp1 + temp2) % 100;
-	return p;
+Money Money::operator +(const Money& temp) {
+	int ex1 = rub * 100 + kop;
+	int ex2 = temp.rub * 100 + temp.kop;
+	Money temp2;
+	temp2.rub = (ex1 + ex2) / 100;
+	temp2.kop = (ex1 + ex2) % 60;
+	return temp2;
 }
 
-//перегрузка глобальной функции-операции ввода 
-istream& operator>>(istream& in, Money& t)
-{
-	cout << "Roubles: "; in >> t.roubles;
-	cout << "Penny: "; in >> t.penny;
+istream& operator >>(istream& in, Money& temp) {
+	cout << "rubles: ";
+	in >> temp.rub;
+	cout << "kopecks: ";
+	in >> temp.kop;
 	return in;
 }
 
-//перегрузка глобальной функции-операции вывода 
-ostream& operator<<(ostream& out, const Money& t)
-{
-	return (out << t.roubles << " . " << t.penny);
+ostream& operator <<(ostream& out, const Money& temp) {
+	return (out << temp.rub << ", " << temp.kop);
 }
