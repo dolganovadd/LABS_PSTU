@@ -1,20 +1,18 @@
-#include "Money.h" 
-#include <iostream> 
+#include <iostream>
+#include "Header.h"
+
 using namespace std;
 
-void main()
-{
-	Money a;//конструктор без параметров 
-	Money b; //конструктор без параметров 
-	Money c; //конструктор без параметров 
+int main() {
+	Money A, B, C;
+	cin >> A >> B;
+	++A;
 
-	cin >> a;//ввод переменной 
-	cin >> b;//ввод переменной
-	++a;//префиксная операция инкремент 
-	cout << a << endl;//вывод переменной
-	c = (a++) + b;//сложение и постфиксная операция инкремент 
+	cout << A << endl;
+	C = (A++) + B;
 
-	cout << "a=" << a << endl; //вывод переменной 
-	cout << "b=" << b << endl; //вывод переменной 
-	cout << "c=" << c << endl; //вывод переменной
+	cout << "A = " << A << endl;
+	cout << "B = " << B << endl;
+	cout << "C = " << C << endl;
+	return 0;
 }
