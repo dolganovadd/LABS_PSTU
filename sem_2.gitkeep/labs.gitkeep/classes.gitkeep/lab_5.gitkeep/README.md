@@ -9,7 +9,8 @@
 Создать производный класс TIME с полями часы, минуты и секунды. Переопределить методы увеличения полей на 1 и определить методы увеличения на n секунд и минут.
 
 # UML - диаграмма 
-...
+
+![](https://sun9-11.userapi.com/impg/X36-5E6rX2-Gl96DmEx-tOhuTxba2FDr5N5kJQ/ytYMTWiZ-Tg.jpg?size=1620x2160&quality=95&sign=1781fdcd32710a06b23fe6b79a9930fd&type=album)
 
 # Код программы 
 
