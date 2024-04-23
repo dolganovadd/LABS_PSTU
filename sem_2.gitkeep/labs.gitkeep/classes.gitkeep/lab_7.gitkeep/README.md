@@ -12,7 +12,7 @@ int() – определение размера списка;
 
 # UML - диаграмма
 
-![](https://sun9-76.userapi.com/impg/GbMZFLZPzMv9T5vewUFid-rvMA8X4obYgXbgCQ/YDThJt5ZGgA.jpg?size=1620x2160&quality=95&sign=664c5aa356bbfdcd844aad593ff3a722&type=album)
+![](https://sun9-5.userapi.com/impg/K_Afe49z-EnjwD9LqxhiehOpGDXoT-xvFAEpoA/trmV_ywvXr0.jpg?size=1620x2160&quality=95&sign=1adda2f5cdb80254f7269b28a05621fe&type=album)
 
 #  Код программы 
 
