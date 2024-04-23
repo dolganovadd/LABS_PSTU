@@ -7,6 +7,9 @@ int() – определение размера списка;
 + вектор – сложение элементов списков a[i]+b[i];
 - n - переход влево к элементу c номером n ( с помощью класса-итератора).
 
+# UML - диаграмма 
+
+![](https://sun9-17.userapi.com/impg/D1si-77tStpUDzHy0PoS1sRSZ-luI6ZgQkU7fg/tZoflBiiglU.jpg?size=1620x2160&quality=95&sign=5452b5f91fa91de3d9fcd92a84dc3966&type=album)
 # Код программы 
 
 >list.h
