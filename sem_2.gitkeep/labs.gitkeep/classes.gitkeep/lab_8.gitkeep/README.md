@@ -13,7 +13,8 @@
 Конец работы (формат команды: q)
 
 # UML - диаграмма
-...
+
+![](https://sun9-76.userapi.com/impg/GbMZFLZPzMv9T5vewUFid-rvMA8X4obYgXbgCQ/YDThJt5ZGgA.jpg?size=1620x2160&quality=95&sign=664c5aa356bbfdcd844aad593ff3a722&type=album)
 
 # Код программы 
 
