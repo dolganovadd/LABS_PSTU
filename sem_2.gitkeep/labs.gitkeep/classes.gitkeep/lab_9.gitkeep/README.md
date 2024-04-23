@@ -13,7 +13,8 @@ int() – определение размера списка;
 
 
 # UML - диаграмма
-...
+
+![](https://sun9-79.userapi.com/impg/cOtFlHlDXd_5OmbMzGeS_BOGmoiQRO8XJ3rnKw/qcvAjicFDR4.jpg?size=1620x2160&quality=95&sign=f6e89ea4c20f049ff89ebd383792a741&type=album)
 
 # Код программы 
 
