@@ -15,7 +15,7 @@
 
 # UML - диаграмма
 
-![](https://psv4.userapi.com/c909218/u272768864/docs/d42/5b96c152aa1e/lab_4.png?extra=FNN6GPsSV4etaKl1Lly4ax41K0DUOZZxLeApeak_WjV_V7Z_G4UxlM9xze1k8rWGlRxFZvBQ6qeRTCeiH7MDKgX_oTYGXKX93tj5mI6r503DDylt1xC3qGWeav5J0Y-01a94XJe7W6N1-5uA4hbApiLnEw)
+![](https://sun9-21.userapi.com/impg/WHR6tf-pbQK-3nsMCaDS4LWAuYsBrWU-IvwNjw/DWkE5KOHIA4.jpg?size=729x499&quality=96&sign=9a8e41b2b58d47d9e42a524e9127a7fe&type=album)
 
 # Код программы 
 > Triad.h
