@@ -8,11 +8,7 @@
 
 # UML - диаграмма
 
-![](https://sun9-7.userapi.com/impg/TERxYyFP3z6yeVNVmqSREUgV7ZWVXMaa8dulSQ/s4ol3Nb3MKY.jpg?size=339x288&quality=96&sign=d4a1be73d62536dcfc85adcc369c56bc&type=album)
-
-
-
-# **Контрольные вопросы.**
+![](https://sun9-21.userapi.com/impg/h265digiHpl6qrYf08aWWDuleYm0tpJXDWXj2g/OfFwtq-fpbA.jpg?size=370x445&quality=96&sign=693041bebdd39dd7c6c2a3c1c8c1b158&type=album)
 
 >Для чего используются дружественные функции и классы?
 
