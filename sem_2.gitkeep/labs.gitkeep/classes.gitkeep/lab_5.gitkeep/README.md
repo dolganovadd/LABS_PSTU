@@ -10,7 +10,7 @@
 
 # UML - диаграмма 
 
-![](https://sun9-11.userapi.com/impg/X36-5E6rX2-Gl96DmEx-tOhuTxba2FDr5N5kJQ/ytYMTWiZ-Tg.jpg?size=1620x2160&quality=95&sign=1781fdcd32710a06b23fe6b79a9930fd&type=album)
+![](https://sun9-80.userapi.com/impg/B-0fugsLEHrf_23ybZCeeK4cgebvFGzey3N-yw/8kf8sHmNrVU.jpg?size=1315x537&quality=96&sign=bcb4d0a36b7061953174083b31555b4b&type=album)
 
 # Код программы 
 
