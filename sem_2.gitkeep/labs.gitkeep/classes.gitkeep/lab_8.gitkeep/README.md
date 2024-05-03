@@ -14,8 +14,7 @@
 
 # UML - диаграмма
 
-![](https://sun9-76.userapi.com/impg/GbMZFLZPzMv9T5vewUFid-rvMA8X4obYgXbgCQ/YDThJt5ZGgA.jpg?size=1620x2160&quality=95&sign=664c5aa356bbfdcd844aad593ff3a722&type=album)
-
+![](https://sun9-78.userapi.com/impg/I2YHpLHg8MU-1J77qmFqw-OnLP4qxi7ny5TBww/2qIDwFEZNSU.jpg?size=1480x696&quality=96&sign=0f709e018077fa670b61af26aba39b82&type=album)
 # Код программы 
 
 >dialog.h
