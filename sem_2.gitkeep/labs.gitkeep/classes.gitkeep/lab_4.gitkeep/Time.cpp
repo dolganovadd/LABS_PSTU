@@ -65,3 +65,4 @@ ostream& operator <<(ostream& out, const Time& time) {
 	out << "\nSeconds: " << time.sec;
 	return out;
 }
+
