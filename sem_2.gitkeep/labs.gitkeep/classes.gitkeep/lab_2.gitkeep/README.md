@@ -11,8 +11,7 @@
 
 # UML - диаграмма
 
-![](https://psv4.userapi.com/c909328/u272768864/docs/d19/21686901a6f9/lab_2.png?extra=3hRFLJ3Hxve-9ubHBee0k9IpeGGDx78y2_oHGWD6f4OeE9mg7qxkn0ouCxAZnDDLNDlvSvgRwRiNz9yR4CCORt3UFlMEXYa50QwG3LNA10KZpr0MDJvOGSsPBjCKT8sLzzESrBwYJGTkElebVyu6j2_BaQ)
-
+![](https://sun9-76.userapi.com/impg/pxMBMeGtzWxwI3bEOz8oC_m7RI773Ce1VQp4QQ/fTXZdGDgycU.jpg?size=243x453&quality=96&sign=1d3d29b319dc9b3bb9296e160437cfed&type=album)
 # **Код программы**
 >main
 ```cpp
