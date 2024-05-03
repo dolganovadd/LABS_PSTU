@@ -9,7 +9,7 @@ int() – определение размера списка;
 
 # UML - диаграмма 
 
-![](https://sun9-17.userapi.com/impg/D1si-77tStpUDzHy0PoS1sRSZ-luI6ZgQkU7fg/tZoflBiiglU.jpg?size=1620x2160&quality=95&sign=5452b5f91fa91de3d9fcd92a84dc3966&type=album)
+![](https://sun9-11.userapi.com/impg/wKqOQ39sOUAJJbNvKJa4D4ca1NEK6q-9UMsFyQ/mq7Me7K70Ek.jpg?size=631x501&quality=96&sign=f05a8d0b2f4835678062bf0078f7d87c&type=album)
 # Код программы 
 
 >list.h
