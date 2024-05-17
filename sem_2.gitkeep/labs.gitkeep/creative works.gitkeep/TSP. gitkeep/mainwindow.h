@@ -28,9 +28,6 @@ public:
     ~MainWindow();
     Graph *gr = new Graph; // Выделение памяти для основного объекта класса Graph
 
-
-
-
 private slots:
     void on_pushButton_clicked();
     void receiveData(const QString& data);
