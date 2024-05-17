@@ -176,13 +176,6 @@ void MainWindow::updateLine(){
     Scene->update();
 }
 
-void MainWindow::on_upd_clicked()
-{
-    updateLine();
-    Scene->update();
-}
-
-
 void MainWindow::on_pushButton_4_clicked()
 {
 
