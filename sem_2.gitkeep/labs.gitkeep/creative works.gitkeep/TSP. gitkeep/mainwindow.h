@@ -32,6 +32,7 @@ private slots:
     void on_pushButton_clicked();
     void receiveData(const QString& data);
     void recEdge(const QString&first,const QString&second,const QString&weidht);
+    void updateLine();
     void on_pushButton_2_clicked();
     void on_pushButton_3_clicked();
     void on_pushButton_4_clicked();
